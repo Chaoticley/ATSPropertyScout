@@ -3,20 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Property Scout product overview - Advanced real estate investment software with powerful analytics and portfolio management tools.">
-    <title>Product - Property Scout</title>
+    <meta name="description" content="PropertyScout product overview - Advanced real estate investment software with powerful analytics and portfolio management tools.">
+    <title>Product - PropertyScout</title>
+    <link rel="stylesheet" href="css/tokens.css">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/theme-enhancements.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
 </head>
-<body>
+<body class="product-page">
     <header class="header">
         <nav class="nav container">
             <div class="nav-brand">
                 <a href="index.html" class="logo">
-                    <img src="images/logo.png" alt="Property Scout Logo">
-                    <span class="logo-text">Property Scout</span>
+                    <img src="images/logo3.png" alt="PropertyScout Logo">
+                    <span class="logo-text">PropertyScout</span>
                 </a>
             </div>
             <ul class="nav-menu" id="navMenu">
@@ -24,7 +28,13 @@
                 <li><a href="features.html">Features</a></li>
                 <li><a href="pricing.html">Pricing</a></li>
                 <li><a href="about.html">About</a></li>
-                <li><a href="contact.html" class="btn-nav">Contact</a></li>
+                   <li><a href="contact.html" class="btn-nav btn-orange cta">Contact</a></li>
+                </ul>
+                <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
             </ul>
             <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
                 <span></span>
@@ -35,14 +45,14 @@
     </header>
 
     <main>
-        <section class="page-hero">
+    <section class="page-hero vertical-fade">
             <div class="container">
-                <h1>Property Scout Platform</h1>
+                <h1>PropertyScout Platform</h1>
                 <p>Comprehensive real estate investment software designed for professionals who demand precision and efficiency.</p>
             </div>
-        </section>
-
-        <section class="product-showcase">
+    </section>
+    <div class="angled-sep" aria-hidden="true"></div>
+    <section class="product-showcase">
             <div class="container">
                 <div class="showcase-item">
                     <div class="showcase-content">
@@ -53,12 +63,13 @@
                             <li>Customizable widgets and metrics</li>
                             <li>Performance tracking and alerts</li>
                         </ul>
+                           <div class="decorative-dot" aria-hidden="true"></div>
                     </div>
-                    <div class="showcase-visual">
-                        <div class="dashboard-preview large">
-                            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop" alt="Property Scout Dashboard" loading="lazy">
+                    <div class="showcase-visual zoom-on-hover">
+                            <div class="dashboard-preview large media-card">
+                                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop" alt="PropertyScout Dashboard" loading="lazy">
+                            </div>
                         </div>
-                    </div>
                 </div>
 
                 <div class="showcase-item reverse">
@@ -71,8 +82,8 @@
                             <li>Comparative property analysis</li>
                         </ul>
                     </div>
-                    <div class="showcase-visual">
-                        <div class="analytics-preview">
+                    <div class="showcase-visual zoom-on-hover">
+                        <div class="analytics-preview media-card">
                             <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop" alt="Analytics Dashboard" loading="lazy">
                         </div>
                     </div>
@@ -88,8 +99,8 @@
                             <li>Automated workflows</li>
                         </ul>
                     </div>
-                    <div class="showcase-visual">
-                        <div class="portfolio-preview">
+                    <div class="showcase-visual zoom-on-hover">
+                        <div class="portfolio-preview media-card">
                             <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&h=600&fit=crop" alt="Portfolio Management" loading="lazy">
                         </div>
                     </div>
@@ -97,11 +108,11 @@
             </div>
         </section>
 
-        <section class="cta-section">
+                <section class="cta-section">
             <div class="container">
-                <h2>Experience Property Scout Today</h2>
+                <h2>Experience PropertyScout Today</h2>
                 <p>See how our platform can transform your real estate investment workflow</p>
-                <a href="pricing.html" class="btn btn-primary btn-large">Start Free Trial</a>
+                <a href="pricing.html" class="btn btn-primary btn-large btn-orange cta">Start Free Trial</a>
             </div>
         </section>
     </main>
@@ -111,8 +122,8 @@
             <div class="footer-content">
                 <div class="footer-brand">
                     <div class="logo">
-                        <img src="images/logo.png" alt="Property Scout Logo">
-                        <span class="logo-text">Property Scout</span>
+                        <img src="images/logo3.png" alt="PropertyScout Logo">
+                        <span class="logo-text">PropertyScout</span>
                     </div>
                 </div>
                 <div class="footer-links">
@@ -134,7 +145,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 Property Scout. All rights reserved.</p>
+                <p>&copy; 2024 PropertyScout. All rights reserved.</p>
             </div>
         </div>
     </footer>

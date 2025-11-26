@@ -1,6 +1,6 @@
-# Property Scout Website
+# PropertyScout Website
 
-Professional website for Property Scout - Real Estate Investment Software for seasoned investors.
+Professional website for PropertyScout - Real Estate Investment Software for seasoned investors.
 
 ## Overview
 
@@ -33,7 +33,7 @@ propertyscout/
 ### Colors (from Logo)
 - **Orange**: `#FF6B35` - Primary CTA color
 - **Purple**: `#6B46C1` - Secondary accent
-- **Gray**: `#4B5563` - Text and secondary elements
+- **Gray**: `#4B4B4B` - Text and secondary elements
 - **Black**: `#111827` - Primary text
 - **White**: `#FFFFFF` - Background
 
@@ -150,5 +150,5 @@ For questions or issues, refer to the code comments or contact the development t
 
 ---
 
-**Property Scout** - Real Estate Investment Software for Professionals
+**PropertyScout** - Real Estate Investment Software for Professionals
 

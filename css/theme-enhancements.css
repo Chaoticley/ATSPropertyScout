@@ -1,0 +1,165 @@
+/* Theme enhancements: smoother easing, image protections, orange accents,
+   compartments, and typography helpers. Loaded after styles.css to layer
+   on top of existing theme rules. */
+
+:root {
+  /* Easing & timing */
+  --ease-smooth: cubic-bezier(.22,1,.36,1); /* soft, snappy end */
+  --ease-soft: cubic-bezier(.25,.46,.45,.94); /* gentle ease */
+  --duration-base: 420ms;
+
+  /* Panel contrast */
+  --panel-contrast: rgba(255,255,255,0.02); /* subtle contrast for compartments */
+}
+
+/* Make many micro-interactions feel smoother by default. Use classes where
+   necessary rather than overriding everything globally. */
+.ui-transition { transition: all var(--duration-base) var(--ease-smooth); }
+.ui-transition--soft { transition: all 520ms var(--ease-soft); }
+
+/* Scroll-triggered animations: slower, eased transitions that reset on exit */
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(18px) scale(.997);
+  transition: opacity 520ms var(--ease-soft), transform 520ms var(--ease-smooth);
+  will-change: transform, opacity;
+}
+.animate-on-scroll.in-view {
+  opacity: 1;
+  transform: none;
+}
+
+/* Growth/scale transitions (soft ends) */
+.scale-smooth {
+  transition: transform 520ms var(--ease-smooth), box-shadow 420ms var(--ease-soft);
+}
+.grow-on-hover { transform-origin: center; }
+.grow-on-hover:hover, .grow-on-hover:focus-within { transform: translateY(-6px) scale(1.02); }
+
+/* Media cards & image protections */
+.media-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--border-radius-lg, 14px);
+  background: linear-gradient(180deg, rgba(255,255,255,0.01), rgba(0,0,0,0.02));
+  min-height: 160px;
+}
+.media-card img, .media-card picture, .media-card video {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* protect against mismatched aspect ratios */
+  object-position: center center;
+  border-radius: inherit;
+}
+.media-card .img-fallback {
+  position: absolute; inset: 0; background: rgba(0,0,0,0.12);
+  display: flex; align-items:center; justify-content:center; color: rgba(255,255,255,0.06);
+}
+
+/* Feature cards: left accent and subtle border when active */
+.feature-card { transition: box-shadow 420ms var(--ease-soft), border-color 360ms var(--ease-smooth); }
+.feature-card .card-frame { transition: transform 520ms var(--ease-smooth); }
+.feature-card:focus-within, .feature-card:hover {
+  box-shadow: 0 18px 40px rgba(0,0,0,0.45);
+}
+.feature-card.accent-left { border-left: 3px solid rgba(255,255,255,0.03); }
+.feature-card.accent-left--orange { border-left-color: var(--brand-orange); }
+
+/* Explicit accent modifier classes so content authors can set accents
+   instead of relying on nth-child positional styles. */
+.feature-card--accent-teal { border-color: rgba(17,207,172,0.06); }
+.feature-card--accent-teal::before { background: linear-gradient(90deg, var(--brand-teal), var(--brand-teal-2)); box-shadow: 0 8px 20px rgba(17,207,172,0.06); }
+.feature-card--accent-orange { border-color: rgba(200,95,19,0.06); }
+.feature-card--accent-orange::before { background: linear-gradient(90deg, var(--brand-orange), var(--brand-orange-2)); box-shadow: 0 8px 20px rgba(200,95,19,0.06); }
+
+/* Orange accent utilities */
+.accent-orange { color: var(--brand-orange); }
+.bg-accent-orange { background: linear-gradient(90deg, var(--brand-orange), var(--brand-orange-2)); color: #fff; }
+
+/* Compartments and panels to create more contrast and rhythm */
+.compartment {
+  background-color: var(--panel-contrast);
+  border-radius: var(--border-radius-lg, 14px);
+  padding: 22px;
+  box-shadow: 0 8px 28px rgba(0,0,0,0.5);
+  border: 1px solid rgba(255,255,255,0.01);
+}
+.compartment--lighter { background-color: rgba(255,255,255,0.03); }
+.compartment--accent { border-left: 4px solid var(--brand-orange); }
+
+/* Decorative helpers (apply to container to add a subtle dot or corner blob)
+   These are utilities—add them where you want decorative shapes. */
+.decorative-dot::after {
+  content: '';
+  position: absolute; width: 10px; height: 10px; border-radius: 50%;
+  background: var(--brand-orange); opacity: 0.95;
+  right: 18px; top: 18px; transform: translateZ(0);
+}
+.corner-blob::before {
+  content: '';
+  position: absolute; right: -40px; top: -36px; width: 160px; height: 160px;
+  background: radial-gradient(circle at 30% 30%, rgba(255,122,45,0.06), transparent 40%);
+  filter: blur(20px);
+}
+
+/* Typography helpers: subtle flavortext without changing base fonts */
+.decorative-italic { font-style: italic; opacity: .95; }
+.emph { font-weight: 700; color: var(--brand-orange); }
+.alt-heading { letter-spacing: -0.5px; font-weight: 700; }
+
+/* Additional typography helpers requested by the user */
+.teal-text { color: var(--brand-teal); }
+.orange-text { color: var(--brand-orange); }
+.caps { text-transform: uppercase; letter-spacing: 1px; font-weight: 700; }
+.alt-font { font-family: 'Poppins', var(--font-primary); }
+.strong-italic { font-weight: 700; font-style: italic; }
+
+/* Make decorative shapes more visible when applied */
+.decorative-dot::after { box-shadow: 0 8px 20px rgba(200,95,19,0.12); }
+.corner-blob::before { opacity: 0.18; }
+
+/* Small helpers for list icons and check acccent */
+.check-accent { color: var(--brand-orange); font-weight:700; }
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .animate-on-scroll, .ui-transition, .grow-on-hover { transition: none !important; transform: none !important; }
+}
+
+/* Slight improvement to angled separators (more contrast and softer edges) */
+.angled-sep { background: linear-gradient(180deg, rgba(255,255,255,0.01), transparent); height: 56px; }
+
+/* Consolidation: keep concise aliases that map CTA helpers to button patterns */
+.cta { position: relative; z-index: 2; }
+.cta.btn, .cta.btn-nav, .cta.btn-primary, .cta.btn-secondary { display: inline-flex; align-items: center; justify-content: center; }
+
+/* Preferred orange button utility */
+.btn--orange, .btn-orange {
+  /* variable-driven orange variant for use with .btn
+     works whether used as <a class="btn btn--orange"> or <button class="btn btn-orange"> */
+  --btn-bg: linear-gradient(90deg, var(--brand-orange), var(--brand-orange-2));
+  --btn-color: #fff;
+  --btn-box-shadow: 0 8px 18px rgba(255,122,45,0.06);
+  --btn-hover-box-shadow: 0 12px 36px rgba(160,75,14,0.12);
+}
+
+/* Teal and gray helper modifiers */
+.btn--teal, .btn-teal {
+  --btn-bg: linear-gradient(90deg, var(--brand-teal), var(--brand-teal-2));
+  --btn-color: #fff;
+  --btn-box-shadow: 0 12px 36px rgba(17,207,172,0.14);
+  --btn-hover-box-shadow: 0 18px 48px rgba(17,207,172,0.18);
+}
+.btn--gray, .btn-gray {
+  --btn-bg: transparent;
+  --btn-color: var(--color-muted);
+  --btn-box-shadow: none;
+  --btn-hover-box-shadow: 0 12px 36px rgba(0,0,0,0.06);
+  border: 1px solid rgba(255,255,255,0.04);
+}
+
+/* Small helper: alias older .accent-orange utility to the newer name */
+.accent-orange { color: var(--brand-orange); }
+
+/* End of theme-enhancements.css */

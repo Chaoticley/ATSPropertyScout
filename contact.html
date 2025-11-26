@@ -3,20 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Contact Property Scout - Get in touch with our team to learn more about our real estate investment software.">
-    <title>Contact - Property Scout</title>
+    <meta name="description" content="Contact PropertyScout - Get in touch with our team to learn more about our real estate investment software.">
+    <title>Contact - PropertyScout</title>
+    <link rel="stylesheet" href="css/tokens.css">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/theme-enhancements.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
 </head>
-<body>
+<body class="contact-page">
     <header class="header">
         <nav class="nav container">
             <div class="nav-brand">
                 <a href="index.html" class="logo">
-                    <img src="images/logo.png" alt="Property Scout Logo">
-                    <span class="logo-text">Property Scout</span>
+                    <img src="images/logo3.png" alt="PropertyScout Logo">
+                    <span class="logo-text">PropertyScout</span>
                 </a>
             </div>
             <ul class="nav-menu" id="navMenu">
@@ -24,7 +28,7 @@
                 <li><a href="features.html">Features</a></li>
                 <li><a href="pricing.html">Pricing</a></li>
                 <li><a href="about.html">About</a></li>
-                <li><a href="contact.html" class="btn-nav active">Contact</a></li>
+                <li><a href="contact.html" class="btn-nav btn-orange cta active">Contact</a></li>
             </ul>
             <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
                 <span></span>
@@ -35,19 +39,20 @@
     </header>
 
     <main>
-        <section class="page-hero">
+    <section class="page-hero vertical-fade">
             <div class="container">
                 <h1>Get in Touch</h1>
                 <p>Have questions? We're here to help. Reach out and we'll get back to you as soon as possible.</p>
+                <div class="decorative-dot" aria-hidden="true"></div>
             </div>
-        </section>
-
-        <section class="contact">
+    </section>
+    <div class="angled-sep" aria-hidden="true"></div>
+    <section class="contact">
             <div class="container">
                 <div class="contact-grid">
                     <div class="contact-info">
                         <h2>Contact Information</h2>
-                        <p>Whether you're interested in learning more about Property Scout, need support, or want to discuss enterprise solutions, we're ready to help.</p>
+                        <p>Whether you're interested in learning more about PropertyScout, need support, or want to discuss enterprise solutions, we're ready to help.</p>
                         
                         <div class="contact-details">
                             <div class="contact-item">
@@ -65,7 +70,7 @@
                         </div>
                     </div>
 
-                    <div class="contact-form-wrapper">
+                    <div class="contact-form-wrapper glass animate-on-scroll">
                         <form class="contact-form" id="contactForm">
                             <div class="form-group">
                                 <label for="name">Name</label>
@@ -94,7 +99,7 @@
                                 <label for="message">Message</label>
                                 <textarea id="message" name="message" rows="6" required></textarea>
                             </div>
-                            <button type="submit" class="btn btn-primary btn-block">Send Message</button>
+                            <button type="submit" class="btn btn-primary btn-block btn-orange cta">Send Message</button>
                             <div class="form-message" id="formMessage"></div>
                         </form>
                     </div>
@@ -108,8 +113,8 @@
             <div class="footer-content">
                 <div class="footer-brand">
                     <div class="logo">
-                        <img src="images/logo.png" alt="Property Scout Logo">
-                        <span class="logo-text">Property Scout</span>
+                        <img src="images/logo3.png" alt="PropertyScout Logo">
+                        <span class="logo-text">PropertyScout</span>
                     </div>
                 </div>
                 <div class="footer-links">
@@ -131,7 +136,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 Property Scout. All rights reserved.</p>
+                <p>&copy; 2024 PropertyScout. All rights reserved.</p>
             </div>
         </div>
     </footer>

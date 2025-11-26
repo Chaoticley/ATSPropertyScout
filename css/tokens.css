@@ -1,0 +1,49 @@
+:root {
+    /* Brand + Theme (PropertyScout) — palette and design tokens */
+
+    /* Brand colors */
+    --brand-teal:   #11CFAC;     /* primary accent */
+    --brand-teal-2: #0FBF9F;     /* gradient mate */
+    --brand-orange: #C85F13;     /* emphasis */
+    --brand-orange-2:#A04B0E;    /* deeper orange/brown */
+
+    /* Accent mappings (backwards-compatible aliases kept) */
+    --color-accent:   var(--brand-teal);
+    --color-accent-2: var(--brand-teal-2);
+    --color-orange:   var(--brand-orange);
+    --color-gray: var(--color-muted);
+
+    /* Typography colors */
+    --color-text: #FFFFFF;
+    --color-muted: rgba(255,255,255,0.78);
+    --color-subtle: rgba(255,255,255,0.65);
+
+    /* Greys re-purposed to subtle whites or deep surfaces */
+    --color-gray-lighter: rgba(255,255,255,0.05);
+    --color-gray-light: rgba(255,255,255,0.10);
+    --color-gray-dark: rgba(255,255,255,0.92);
+
+    --color-black: #020305;
+    --color-white: #FFFFFF;
+
+    /* Charcoal backgrounds */
+    --bg-primary:   #0A1014;
+    --bg-secondary: #0D141B;
+    --bg-card:      #111923;
+
+    /* Used by mobile menu/footer */
+    --color-gray-darker: #0B0F13;
+
+    --font-primary: 'Montserrat', 'Poppins', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    --font-headings: 'Montserrat', 'Merriweather', serif;
+
+    --spacing-xs: 0.5rem;
+    --spacing-sm: 1rem;
+    --spacing-md: 1.5rem;
+    --spacing-lg: 2rem;
+    --spacing-xl: 3rem;
+    --spacing-2xl: 4rem;
+    --border-radius: 10px;
+    --transition: all 0.28s cubic-bezier(.2,.9,.3,1);
+    --header-height: 76px;
+}

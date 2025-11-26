@@ -3,20 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="About Property Scout - Learn about our mission to empower real estate investors with powerful software tools.">
-    <title>About - Property Scout</title>
+    <meta name="description" content="About PropertyScout - Learn about our mission to empower real estate investors with powerful software tools.">
+    <title>About - PropertyScout</title>
+    <link rel="stylesheet" href="css/tokens.css">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/theme-enhancements.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
 </head>
-<body>
+<body class="about-page">
     <header class="header">
         <nav class="nav container">
             <div class="nav-brand">
                 <a href="index.html" class="logo">
-                    <img src="images/logo.png" alt="Property Scout Logo">
-                    <span class="logo-text">Property Scout</span>
+                    <img src="images/logo3.png" alt="PropertyScout Logo">
+                    <span class="logo-text">PropertyScout</span>
                 </a>
             </div>
             <ul class="nav-menu" id="navMenu">
@@ -24,7 +28,7 @@
                 <li><a href="features.html">Features</a></li>
                 <li><a href="pricing.html">Pricing</a></li>
                 <li><a href="about.html" class="active">About</a></li>
-                <li><a href="contact.html" class="btn-nav">Contact</a></li>
+                <li><a href="contact.html" class="btn-nav btn-orange cta">Contact</a></li>
             </ul>
             <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
                 <span></span>
@@ -35,45 +39,78 @@
     </header>
 
     <main>
-        <section class="page-hero">
-            <div class="container">
-                <h1>About Property Scout</h1>
-                <p>Empowering real estate investors with the tools they need to succeed.</p>
+    <section class="page-hero vertical-fade">
+            <div class="container split-hero">
+                <div class="hero-copy animate-on-scroll">
+                    <h1>About PropertyScout</h1>
+                    <p class="hero-subtitle">We empower professional investors with precision tools that make portfolio decisions faster and clearer.</p>
+                    <div class="about-stats animate-stagger">
+                        <div class="stat">
+                            <h3>+10k</h3>
+                            <p>Properties analyzed</p>
+                        </div>
+                        <div class="stat">
+                            <h3>4.8★</h3>
+                            <p>Average user rating</p>
+                        </div>
+                        <div class="stat">
+                            <h3>100%</h3>
+                            <p>Audit-ready reports</p>
+                        </div>
+                    </div>
+                    <div class="hero-cta" style="margin-top:var(--spacing-md);">
+                        <a href="pricing.html" class="btn btn-primary btn-orange cta">Start Free Trial</a>
+                        <a href="contact.html" class="btn btn-secondary cta">Contact Sales</a>
+                    </div>
+                </div>
+                <div class="hero-media animate-on-scroll zoom-on-hover">
+                    <div class="media-card dashboard-preview">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=900&h=600&fit=crop" alt="PropertyScout Dashboard" loading="lazy">
+                    </div>
+                </div>
+                <div class="decor-blob large" aria-hidden="true"></div>
+                <div class="decor-blob small" aria-hidden="true"></div>
             </div>
-        </section>
-
-        <section class="about-content">
+    </section>
+    <div class="angled-sep" aria-hidden="true"></div>
+    <section class="about-content">
             <div class="container">
-                <div class="about-section">
+                <div class="about-section animate-on-scroll">
                     <h2>Our Mission</h2>
-                    <p>Property Scout was founded with a simple goal: to provide real estate investors with professional-grade software that simplifies complex workflows and enables smarter investment decisions.</p>
-                    <p>We understand that successful real estate investing requires more than just finding properties—it demands meticulous analysis, organized management, and strategic planning. Our platform brings all of these elements together in one powerful, intuitive solution.</p>
+                    <p><span class="alt-font caps teal-text">Simple:</span> give investors the data, tools, and workflows they need to make faster, more confident decisions.</p>
+                    <div class="section-box card-frame" style="margin-top:var(--spacing-md);">
+                        <p><strong>We surface the numbers that matter.</strong> Audit-ready reports, automated cash-flow modeling, and a dashboard that helps you spot opportunities at a glance.</p>
+                        <p class="has-tooltip" data-tooltip="Click contact to request a demo">Want a demo?</p>
+                    </div>
                 </div>
 
-                <div class="about-section">
+                <div class="about-section animate-on-scroll">
                     <h2>Built for Professionals</h2>
-                    <p>Unlike generic property management tools, Property Scout is designed specifically for seasoned investors who manage multiple properties and need sophisticated analytics to optimize their portfolios.</p>
-                    <p>Our team combines deep real estate expertise with cutting-edge technology to deliver features that matter most to serious investors—from advanced financial modeling to comprehensive market intelligence.</p>
+                    <p>We focus on core workflows — acquisition analysis, portfolio monitoring, and reporting — with deep integrations and enterprise-ready controls.</p>
                 </div>
 
-                <div class="about-section">
+                <div class="about-section animate-on-scroll">
                     <h2>Our Values</h2>
                     <div class="values-grid">
                         <div class="value-item">
-                            <h3>Precision</h3>
-                            <p>We believe in accuracy and attention to detail. Every calculation, every metric, every insight is designed to be reliable and actionable.</p>
+                            <h3 class="alt-font teal-text">Precision</h3>
+                            <p>Accurate financials and audit-grade reports.</p>
+                            <div class="value-meta">Audit-ready outputs and clear traceability.</div>
                         </div>
                         <div class="value-item">
-                            <h3>Efficiency</h3>
-                            <p>Time is your most valuable asset. Our platform eliminates manual work and automates repetitive tasks so you can focus on what matters.</p>
+                            <h3 class="alt-font orange-text">Efficiency</h3>
+                            <p>Automations that remove busywork.</p>
+                            <div class="value-meta">Automate repetitive tasks and speed operations.</div>
                         </div>
                         <div class="value-item">
-                            <h3>Transparency</h3>
-                            <p>Clear, honest communication and straightforward pricing. No hidden fees, no surprises—just straightforward value.</p>
+                            <h3 class="alt-font teal-text">Transparency</h3>
+                            <p>Clear pricing and predictable upgrades.</p>
+                            <div class="value-meta">Open data policies and predictable billing.</div>
                         </div>
                         <div class="value-item">
-                            <h3>Innovation</h3>
-                            <p>We continuously evolve our platform based on user feedback and industry trends, ensuring you always have access to the latest tools.</p>
+                            <h3 class="alt-font orange-text">Innovation</h3>
+                            <p>Continuous improvement driven by customer feedback.</p>
+                            <div class="value-meta">Customer-driven roadmap and rapid iteration.</div>
                         </div>
                     </div>
                 </div>
@@ -82,9 +119,11 @@
 
         <section class="cta-section">
             <div class="container">
-                <h2>Join the Property Scout Community</h2>
-                <p>See why thousands of investors trust Property Scout to manage their portfolios</p>
-                <a href="contact.html" class="btn btn-primary btn-large">Get in Touch</a>
+                <h2>Join the PropertyScout Community</h2>
+                <p>Trusted by professional investors worldwide</p>
+                <div class="cta-block">
+                    <a href="contact.html" class="btn btn-primary btn-large btn-orange cta">Get in Touch</a>
+                </div>
             </div>
         </section>
     </main>
@@ -94,8 +133,8 @@
             <div class="footer-content">
                 <div class="footer-brand">
                     <div class="logo">
-                        <img src="images/logo.png" alt="Property Scout Logo">
-                        <span class="logo-text">Property Scout</span>
+                        <img src="images/logo3.png" alt="PropertyScout Logo">
+                        <span class="logo-text">PropertyScout</span>
                     </div>
                 </div>
                 <div class="footer-links">
@@ -117,7 +156,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 Property Scout. All rights reserved.</p>
+                <p>&copy; 2025 PropertyScout. All rights reserved.</p>
             </div>
         </div>
     </footer>
