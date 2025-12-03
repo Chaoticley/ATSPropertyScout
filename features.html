@@ -3,10 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="PropertyScout features - Comprehensive real estate investment tools including analytics, portfolio management, and market intelligence.">
+    <meta name="description" content="PropertyScout features - Deal organization, automated data analysis, cap rate calculations, and paperwork management for real estate investors.">
     <title>Features - PropertyScout</title>
     <link rel="stylesheet" href="css/tokens.css">
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/utilities.css">
     <link rel="stylesheet" href="css/theme-enhancements.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,8 +22,8 @@
         <nav class="nav container">
             <div class="nav-brand">
                 <a href="index.html" class="logo">
-                    <img src="images/logo3.png" alt="PropertyScout Logo">
-                    <span class="logo-text">PropertyScout</span>
+                    <img src="images/logo.png" alt="PropertyScout Logo">
+                    <span class="logo-text"><span class="logo-text-property">Property</span><span class="logo-text-scout">Scout</span></span>
                 </a>
             </div>
             <ul class="nav-menu" id="navMenu">
@@ -41,10 +44,13 @@
     <main>
         <section class="page-hero vertical-fade">
             <div class="container">
-                <h1>Powerful Features for Real Estate Professionals</h1>
-                <p>Everything you need to manage, analyze, and grow your property portfolio.</p>
-                <div class="corner-blob" aria-hidden="true"></div>
-                <div class="decorative-dot" aria-hidden="true"></div>
+                <div class="hero-badge orange">
+                    <span class="caps teal-text">FEATURES</span>
+                </div>
+                <h1><span class="accent-teal">Features</span> for <span class="accent-orange">Real Estate</span> Investors</h1>
+                <div class="text-widget text-widget-accent-teal-top" style="max-width: 700px; margin: 0 auto;">
+                    <p class="body-alt">Manage your <strong>leads</strong>, track <em>proposals</em>, analyze investments, and monitor your <strong>portfolio</strong>—all in one platform.</p>
+                </div>
             </div>
         </section>
 
@@ -53,24 +59,51 @@
         <section class="features-summary">
             <div class="container">
                 <div class="section-header">
-                    <h2>Key Capabilities</h2>
-                    <p>Short, scanned overview of what PropertyScout brings to your portfolio.</p>
+                    <h2><span class="accent-orange">Key</span> <span class="accent-teal">Capabilities</span></h2>
+                    <p class="alt-font">How streamlined organization transforms your <span class="accent-teal">deal workflow</span>.</p>
                 </div>
                 <div class="features-grid interactive">
                     <div class="feature-card feature-card--accent-teal">
-                        <div class="feature-icon"><img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=200&h=200&fit=crop" alt="Analysis" loading="lazy"></div>
-                        <h3 class="alt-font caps teal-text">Analysis</h3>
-                        <div class="card-body"><p class="alt-font">Instant ROI, IRR, and scenario modeling.</p></div>
+                        <div class="feature-icon" style="display: flex; align-items: center; justify-content: center; background: rgba(17,207,172,0.1);">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="color: var(--brand-teal);">
+                                <path d="M9 5H7C5.89543 5 5 5.89543 5 7V19C5 20.1046 5.89543 21 7 21H17C18.1046 21 19 20.1046 19 19V7C19 5.89543 18.1046 5 17 5H15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M9 5C9 3.89543 9.89543 3 11 3H13C14.1046 3 15 3.89543 15 5V5C15 6.10457 14.1046 7 13 7H11C9.89543 7 9 6.10457 9 5V5Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M9 12H15" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                <path d="M9 16H15" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                        </div>
+                        <h3>Lead Management</h3>
+                        <div class="card-body">
+                            <p>Manage your property leads and pipeline with advanced filtering by status, type, zoning, and investment strategy.</p>
+                        </div>
                     </div>
                     <div class="feature-card feature-card--accent-orange">
-                        <div class="feature-icon"><img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=200&h=200&fit=crop" alt="Management" loading="lazy"></div>
-                        <h3 class="alt-font caps orange-text">Management</h3>
-                        <div class="card-body"><p class="alt-font">Central property database and maintenance workflows.</p></div>
+                        <div class="feature-icon" style="display: flex; align-items: center; justify-content: center; background: rgba(200,95,19,0.1);">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="color: var(--brand-orange);">
+                                <path d="M14 2H6C5.46957 2 4.96086 2.21071 4.58579 2.58579C4.21071 2.96086 4 3.46957 4 4V20C4 20.5304 4.21071 21.0391 4.58579 21.4142C4.96086 21.7893 5.46957 22 6 22H18C18.5304 22 19.0391 21.7893 19.4142 21.4142C19.7893 21.0391 20 20.5304 20 20V8L14 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M14 2V8H20" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M16 13H8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                <path d="M16 17H8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                <path d="M10 9H9H8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                        </div>
+                        <h3>Proposal Tracking</h3>
+                        <div class="card-body">
+                            <p>Create and track property proposals from your leads. Never lose track of an offer or negotiation.</p>
+                        </div>
                     </div>
                     <div class="feature-card feature-card--accent-teal">
-                        <div class="feature-icon"><img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=200&h=200&fit=crop" alt="Market" loading="lazy"></div>
-                        <h3 class="alt-font caps teal-text">Market Intelligence</h3>
-                        <div class="card-body"><p class="alt-font">Neighborhood analytics and trend forecasting.</p></div>
+                        <div class="feature-icon" style="display: flex; align-items: center; justify-content: center; background: rgba(17,207,172,0.1);">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="color: var(--brand-teal);">
+                                <path d="M3 3V21H21" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M7 16L12 11L16 15L21 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M21 10V3H14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <h3>Financial Analysis</h3>
+                        <div class="card-body">
+                            <p>Calculate cap rates instantly and generate custom rental analysis reports for any property.</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -79,102 +112,130 @@
         <section class="features-detailed">
             <div class="container">
                 <div class="section-header">
-                    <h2>Detailed Features</h2>
-                    <p>Deep-dive into capabilities with short bullets and visuals.</p>
+                    <h2><strong class="gradient-text">Detailed Features</strong></h2>
+                    <div class="text-widget text-widget-accent-teal-tb" style="max-width: 600px; margin: var(--spacing-md) auto 0;">
+                        <p>Explore how streamlined tools transform your <span class="accent-teal">real estate</span> investment workflow.</p>
+                    </div>
                 </div>
 
                 <div class="feature-detail animate-on-scroll">
-                    <div class="feature-detail-icon">
-                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=200&h=200&fit=crop" alt="Investment Analysis" loading="lazy">
+                    <div class="feature-detail-icon" style="display: flex; align-items: center; justify-content: center; background: rgba(17,207,172,0.1); padding: 1rem;">
+                        <svg width="60" height="60" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="color: var(--brand-teal);">
+                            <path d="M9 5H7C5.89543 5 5 5.89543 5 7V19C5 20.1046 5.89543 21 7 21H17C18.1046 21 19 20.1046 19 19V7C19 5.89543 18.1046 5 17 5H15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M9 5C9 3.89543 9.89543 3 11 3H13C14.1046 3 15 3.89543 15 5V5C15 6.10457 14.1046 7 13 7H11C9.89543 7 9 6.10457 9 5V5Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M9 12H15" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            <path d="M9 16H15" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
                     </div>
                     <div class="feature-detail-content">
-                        <h2>Investment Analysis</h2>
-                        <p>Comprehensive financial analysis tools to evaluate potential investments quickly and accurately.</p>
+                        <h2><span class="accent-teal">Lead</span> Management & Pipeline</h2>
+                        <p>Manage your property leads and pipeline with powerful filtering and organization tools to track every opportunity.</p>
                         <ul>
-                            <li>Automated ROI, IRR, and cash-on-cash return calculations</li>
-                            <li>Scenario modeling and sensitivity analysis</li>
-                            <li>Comparable property analysis</li>
-                            <li>Deal scoring and ranking system</li>
+                            <li>Advanced filtering by status, primary type, zoning, dwelling type, and investment strategy</li>
+                            <li>Track lead priority and viewings scheduled</li>
+                            <li>AI-powered lead organization and categorization</li>
+                            <li>Centralized dashboard showing total leads and key metrics</li>
                         </ul>
                     </div>
                 </div>
 
                 <div class="feature-detail animate-on-scroll">
-                    <div class="feature-detail-icon">
-                        <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=200&h=200&fit=crop" alt="Portfolio Management" loading="lazy">
+                    <div class="feature-detail-icon" style="display: flex; align-items: center; justify-content: center; background: rgba(200,95,19,0.1); padding: 1rem;">
+                        <svg width="60" height="60" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="color: var(--brand-orange);">
+                            <path d="M14 2H6C5.46957 2 4.96086 2.21071 4.58579 2.58579C4.21071 2.96086 4 3.46957 4 4V20C4 20.5304 4.21071 21.0391 4.58579 21.4142C4.96086 21.7893 5.46957 22 6 22H18C18.5304 22 19.0391 21.7893 19.4142 21.4142C19.7893 21.0391 20 20.5304 20 20V8L14 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M14 2V8H20" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M16 13H8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            <path d="M16 17H8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            <path d="M10 9H9H8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
                     </div>
                     <div class="feature-detail-content">
-                        <h2>Portfolio Management</h2>
-                        <p>Centralized platform to manage all aspects of your real estate portfolio.</p>
+                        <h2><span class="accent-orange">Proposal</span> Tracking</h2>
+                        <p>Create and manage property proposals directly from your leads. Track offers and negotiations in one place.</p>
                         <ul>
-                            <li>Unified property database with custom fields</li>
-                            <li>Document storage and organization</li>
-                            <li>Maintenance tracking and scheduling</li>
-                            <li>Tenant and lease management</li>
+                            <li>Create proposals from individual lead pages</li>
+                            <li>Track all offers and negotiations</li>
+                            <li>View and manage all property proposals in one centralized location</li>
+                            <li>Never lose track of an important offer</li>
                         </ul>
                     </div>
                 </div>
 
                 <div class="feature-detail animate-on-scroll">
-                    <div class="feature-detail-icon">
-                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=200&h=200&fit=crop" alt="Market Intelligence" loading="lazy">
+                    <div class="feature-detail-icon" style="display: flex; align-items: center; justify-content: center; background: rgba(17,207,172,0.1); padding: 1rem;">
+                        <svg width="60" height="60" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="color: var(--brand-teal);">
+                            <path d="M3 21H21" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M5 21V7L13 2L21 7V21" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M9 9V21" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M15 9V21" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
                     </div>
                     <div class="feature-detail-content">
-                        <h2>Market Intelligence</h2>
-                        <p>Stay ahead with real-time market data and insights.</p>
+                        <h2><span class="accent-teal">Asset</span> Portfolio Management</h2>
+                        <p>Track purchased and sold properties in your portfolio. Monitor your entire real estate investment portfolio.</p>
                         <ul>
-                            <li>Market trend analysis and forecasting</li>
-                            <li>Neighborhood analytics and demographics</li>
-                            <li>Property value estimates and appreciation tracking</li>
-                            <li>Competitive market analysis</li>
+                            <li>Track all purchased and sold properties</li>
+                            <li>Monitor portfolio value and performance</li>
+                            <li>Organize assets by property type and location</li>
+                            <li>Complete portfolio overview in one dashboard</li>
                         </ul>
                     </div>
                 </div>
 
                 <div class="feature-detail animate-on-scroll">
-                    <div class="feature-detail-icon">
-                        <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=200&h=200&fit=crop" alt="Automated Reporting" loading="lazy">
+                    <div class="feature-detail-icon" style="display: flex; align-items: center; justify-content: center; background: rgba(200,95,19,0.1); padding: 1rem;">
+                        <svg width="60" height="60" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="color: var(--brand-orange);">
+                            <path d="M12 2V22M17 5H9.5C8.57174 5 7.6815 5.36875 7.02513 6.02513C6.36875 6.6815 6 7.57174 6 8.5C6 9.42826 6.36875 10.3185 7.02513 10.9749C7.6815 11.6313 8.57174 12 9.5 12H14.5C15.4283 12 16.3185 12.3687 16.9749 13.0251C17.6313 13.6815 18 14.5717 18 15.5C18 16.4283 17.6313 17.3185 16.9749 17.9749C16.3185 18.6313 15.4283 19 14.5 19H6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
                     </div>
                     <div class="feature-detail-content">
-                        <h2>Automated Reporting</h2>
-                        <p>Generate professional reports automatically and share insights with stakeholders.</p>
+                        <h2><span class="accent-orange">Financial</span> Analysis Tools</h2>
+                        <p>Calculate cap rates instantly and generate custom reports to analyze potential rental property deals.</p>
                         <ul>
-                            <li>Customizable report templates</li>
-                            <li>Scheduled report delivery</li>
-                            <li>Financial performance summaries</li>
-                            <li>Portfolio health dashboards</li>
+                            <li>Built-in cap rate calculator with instant calculations</li>
+                            <li>Calculate NOI and property value metrics</li>
+                            <li>Generate custom rental analysis reports</li>
+                            <li>Report builder with customizable time ranges and report types</li>
                         </ul>
                     </div>
                 </div>
 
                 <div class="feature-detail animate-on-scroll">
-                    <div class="feature-detail-icon">
-                        <img src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=200&h=200&fit=crop" alt="Financial Tracking" loading="lazy">
+                    <div class="feature-detail-icon" style="display: flex; align-items: center; justify-content: center; background: rgba(17,207,172,0.1); padding: 1rem;">
+                        <svg width="60" height="60" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="color: var(--brand-teal);">
+                            <path d="M4 4H20C21.1 4 22 4.9 22 6V18C22 19.1 21.1 20 20 20H4C2.9 20 2 19.1 2 18V6C2 4.9 2.9 4 4 4Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M22 6L12 13L2 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
                     </div>
                     <div class="feature-detail-content">
-                        <h2>Financial Tracking</h2>
-                        <p>Complete financial management for your investment properties.</p>
+                        <h2><span class="accent-teal">Email</span> Integration</h2>
+                        <p>Receive property submissions directly to your inbox. Send property details to your dedicated PropertyScout email address.</p>
                         <ul>
-                            <li>Income and expense tracking</li>
-                            <li>Tax document organization</li>
-                            <li>Cash flow projections</li>
-                            <li>Integration with accounting software</li>
+                            <li>Dedicated email address for property submissions</li>
+                            <li>AI-powered email parsing and property data extraction</li>
+                            <li>Automatic lead creation from email submissions</li>
+                            <li>Organize inbox, archived emails, and files</li>
                         </ul>
                     </div>
                 </div>
 
                 <div class="feature-detail animate-on-scroll">
-                    <div class="feature-detail-icon">
-                        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=200&h=200&fit=crop" alt="Deal Pipeline" loading="lazy">
+                    <div class="feature-detail-icon" style="display: flex; align-items: center; justify-content: center; background: rgba(200,95,19,0.1); padding: 1rem;">
+                        <svg width="60" height="60" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="color: var(--brand-orange);">
+                            <path d="M17 21V19C17 17.9391 16.5786 16.9217 15.8284 16.1716C15.0783 15.4214 14.0609 15 13 15H5C3.93913 15 2.92172 15.4214 2.17157 16.1716C1.42143 16.9217 1 17.9391 1 19V21" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M9 11C11.2091 11 13 9.20914 13 7C13 4.79086 11.2091 3 9 3C6.79086 3 5 4.79086 5 7C5 9.20914 6.79086 11 9 11Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M23 21V19C22.9993 18.1137 22.7044 17.2528 22.1614 16.5523C21.6184 15.8519 20.8581 15.3516 20 15.13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M16 3.13C16.8604 3.35031 17.623 3.85071 18.1676 4.55232C18.7122 5.25392 19.0078 6.11683 19.0078 7.005C19.0078 7.89318 18.7122 8.75608 18.1676 9.45769C17.623 10.1593 16.8604 10.6597 16 10.88" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
                     </div>
                     <div class="feature-detail-content">
-                        <h2>Deal Pipeline</h2>
-                        <p>Track and manage potential investments from initial contact to closing.</p>
+                        <h2><span class="accent-orange">Team</span> Collaboration</h2>
+                        <p>Work with your team on properties and deals. Manage team members, organizations, and permissions.</p>
                         <ul>
-                            <li>Deal stage tracking</li>
-                            <li>Task and deadline management</li>
-                            <li>Communication history</li>
-                            <li>Deal probability scoring</li>
+                            <li>Invite team members and manage permissions</li>
+                            <li>Create and manage multiple organizations</li>
+                            <li>Calendar integration for scheduling viewings and events</li>
+                            <li>Shared inbox and collaboration tools</li>
                         </ul>
                     </div>
                 </div>
@@ -183,8 +244,8 @@
 
         <section class="cta-section">
             <div class="container">
-                <h2>Ready to Experience These Features?</h2>
-                <p>Start your free trial and see how PropertyScout can transform your workflow</p>
+                <h2>Ready to <span class="accent-teal">Streamline</span> Your <span class="accent-orange">Real Estate</span> Workflow?</h2>
+                <p>Start your <span class="accent-orange">free trial</span> and manage <span class="accent-teal">leads</span>, <span class="accent-orange">proposals</span>, and your <span class="accent-teal">portfolio</span> with <strong class="accent-orange">AI-powered</strong> tools</p>
                 <a href="pricing.html" class="btn btn-primary btn-large btn-orange cta">Start Free Trial</a>
             </div>
         </section>
@@ -195,10 +256,10 @@
             <div class="footer-content">
                 <div class="footer-brand">
                     <div class="logo">
-                        <img src="images/logo3.png" alt="PropertyScout Logo">
-                                    </div>
-                                </div>
-                            </section>
+                        <img src="images/logo.png" alt="PropertyScout Logo">
+                        <span class="logo-text"><span class="logo-text-property">Property</span><span class="logo-text-scout">Scout</span></span>
+                    </div>
+                </div>
                 <div class="footer-links">
                     <div class="footer-column">
                         <h4>Product</h4>
@@ -218,7 +279,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 PropertyScout. All rights reserved.</p>
+                <p>&copy; 2025 Din Ghauri. All rights reserved.</p>
             </div>
         </div>
     </footer>

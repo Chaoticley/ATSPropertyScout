@@ -3,10 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="PropertyScout pricing plans - Choose the right plan for your real estate investment needs. Flexible pricing for professionals.">
+    <meta name="description" content="PropertyScout pricing plans - Choose the right plan for deal organization and property data analysis. Flexible pricing for real estate investors.">
     <title>Pricing - PropertyScout</title>
     <link rel="stylesheet" href="css/tokens.css">
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/utilities.css">
     <link rel="stylesheet" href="css/theme-enhancements.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,8 +22,8 @@
         <nav class="nav container">
             <div class="nav-brand">
                 <a href="index.html" class="logo">
-                    <img src="images/logo3.png" alt="PropertyScout Logo">
-                    <span class="logo-text">PropertyScout</span>
+                    <img src="images/logo.png" alt="PropertyScout Logo">
+                    <span class="logo-text"><span class="logo-text-property">Property</span><span class="logo-text-scout">Scout</span></span>
                 </a>
             </div>
             <ul class="nav-menu" id="navMenu">
@@ -29,12 +32,6 @@
                 <li><a href="pricing.html" class="active">Pricing</a></li>
                 <li><a href="about.html">About</a></li>
                    <li><a href="contact.html" class="btn-nav btn-orange cta">Contact</a></li>
-                </ul>
-                <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
             </ul>
             <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
                 <span></span>
@@ -47,14 +44,22 @@
     <main>
     <section class="page-hero vertical-fade">
             <div class="container">
-                <h1>Simple, Transparent Pricing</h1>
-                <p>Choose the plan that fits your portfolio size and investment goals.</p>
+                <div class="hero-badge">
+                    <span class="caps orange-text">PRICING</span>
+                </div>
+                <h1><span class="accent-teal">Simple</span>, <span class="accent-orange">Transparent</span> Pricing</h1>
+                <div class="text-widget text-widget-accent-orange-top" style="max-width: 600px; margin: 0 auto;">
+                    <p class="body-alt">Choose the plan that fits your <strong>deal volume</strong> and <em>investment needs</em>.</p>
+                </div>
             </div>
     </section>
-            <div class="corner-blob" aria-hidden="true"></div>
     <div class="angled-sep" aria-hidden="true"></div>
     <section class="pricing">
             <div class="container">
+                <div class="section-header" style="margin-bottom: var(--spacing-3xl);">
+                    <h2>Choose Your <span class="gradient-text">Plan</span></h2>
+                    <p class="alt-font">Flexible pricing designed to <span class="accent-orange">grow</span> with your <span class="accent-teal">deal volume</span></p>
+                </div>
                 <div class="pricing-grid">
                     <div class="pricing-card">
                         <div class="pricing-header">
@@ -66,9 +71,9 @@
                             <p class="pricing-description">Perfect for individual investors getting started</p>
                         </div>
                         <ul class="pricing-features">
-                            <li>Up to 10 properties</li>
-                            <li>Basic analytics and reporting</li>
-                            <li>Portfolio dashboard</li>
+                            <li>Up to 10 active deals</li>
+                            <li>Deal organization and management</li>
+                            <li>Basic data analysis and cap rate calculations</li>
                             <li>Email support</li>
                             <li>Mobile app access</li>
                         </ul>
@@ -83,13 +88,13 @@
                                 <span class="price-amount">$249</span>
                                 <span class="price-period">/month</span>
                             </div>
-                            <p class="pricing-description">For serious investors managing multiple properties</p>
+                            <p class="pricing-description">For serious investors managing multiple deals</p>
                         </div>
                         <ul class="pricing-features">
-                            <li>Unlimited properties</li>
-                            <li>Advanced analytics and forecasting</li>
-                            <li>Market intelligence tools</li>
-                            <li>Automated reporting</li>
+                            <li>Unlimited deals</li>
+                            <li>Advanced analysis and insights</li>
+                            <li>Import data from property listings</li>
+                            <li>Advanced deal organization and document management</li>
                             <li>Priority support</li>
                             <li>API access</li>
                             <li>Custom integrations</li>
@@ -103,7 +108,7 @@
                             <div class="pricing-price">
                                 <span class="price-amount">Custom</span>
                             </div>
-                            <p class="pricing-description">For teams and large portfolios</p>
+                            <p class="pricing-description">For teams and large deal volumes</p>
                         </div>
                         <ul class="pricing-features">
                             <li>Everything in Professional</li>
@@ -119,7 +124,7 @@
                 </div>
 
                 <div class="pricing-faq">
-                    <h2>Frequently Asked Questions</h2>
+                    <h2><strong>Frequently Asked Questions</strong></h2>
                     <div class="faq-grid">
                         <div class="faq-item">
                             <h4>Can I change plans later?</h4>
@@ -144,8 +149,8 @@
 
                 <section class="cta-section">
             <div class="container">
-                <h2>Ready to Get Started?</h2>
-                <p>Start your free trial today. No credit card required.</p>
+                <h2>Ready to <span class="accent-orange">Get Started</span>?</h2>
+                <p>Start your <span class="accent-teal">free trial</span> today. No <span class="accent-orange">credit card</span> required. <span class="accent-teal">Unlimited</span> access to all <strong class="accent-orange">features</strong>.</p>
                 <a href="contact.html" class="btn btn-primary btn-large btn-orange cta">Start Free Trial</a>
             </div>
         </section>
@@ -156,8 +161,8 @@
             <div class="footer-content">
                 <div class="footer-brand">
                     <div class="logo">
-                        <img src="images/logo3.png" alt="PropertyScout Logo">
-                        <span class="logo-text">PropertyScout</span>
+                        <img src="images/logo.png" alt="PropertyScout Logo">
+                        <span class="logo-text"><span class="logo-text-property">Property</span><span class="logo-text-scout">Scout</span></span>
                     </div>
                 </div>
                 <div class="footer-links">
@@ -179,7 +184,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 PropertyScout. All rights reserved.</p>
+                <p>&copy; 2025 Din Ghauri. All rights reserved.</p>
             </div>
         </div>
     </footer>

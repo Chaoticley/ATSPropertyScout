@@ -3,10 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="About PropertyScout - Learn about our mission to empower real estate investors with powerful software tools.">
+    <meta name="description" content="About PropertyScout - Organizational tool for real estate investors. Learn how we help organize deals and analyze property data automatically.">
     <title>About - PropertyScout</title>
     <link rel="stylesheet" href="css/tokens.css">
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/utilities.css">
     <link rel="stylesheet" href="css/theme-enhancements.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,8 +22,8 @@
         <nav class="nav container">
             <div class="nav-brand">
                 <a href="index.html" class="logo">
-                    <img src="images/logo3.png" alt="PropertyScout Logo">
-                    <span class="logo-text">PropertyScout</span>
+                    <img src="images/logo.png" alt="PropertyScout Logo">
+                    <span class="logo-text"><span class="logo-text-property">Property</span><span class="logo-text-scout">Scout</span></span>
                 </a>
             </div>
             <ul class="nav-menu" id="navMenu">
@@ -42,20 +45,25 @@
     <section class="page-hero vertical-fade">
             <div class="container split-hero">
                 <div class="hero-copy animate-on-scroll">
-                    <h1>About PropertyScout</h1>
-                    <p class="hero-subtitle">We empower professional investors with precision tools that make portfolio decisions faster and clearer.</p>
+                    <div class="hero-badge">
+                        <span class="caps teal-text">ABOUT</span>
+                    </div>
+                    <h1>About <span class="accent-orange">PropertyScout</span></h1>
+                    <div class="text-widget text-widget-accent-teal-top" style="max-width: 700px; margin: 0 auto;">
+                        <p class="hero-subtitle body-alt">We <strong>empower</strong> real estate investors with AI-powered tools to manage leads, track proposals, analyze investments, and monitor portfolios.</p>
+                    </div>
                     <div class="about-stats animate-stagger">
                         <div class="stat">
-                            <h3>+10k</h3>
-                            <p>Properties analyzed</p>
+                            <h3>Lead Management</h3>
+                            <p>Pipeline tracking</p>
                         </div>
                         <div class="stat">
-                            <h3>4.8★</h3>
-                            <p>Average user rating</p>
+                            <h3>Financial Analysis</h3>
+                            <p>Cap rate calculator</p>
                         </div>
                         <div class="stat">
-                            <h3>100%</h3>
-                            <p>Audit-ready reports</p>
+                            <h3>Portfolio Tracking</h3>
+                            <p>Asset management</p>
                         </div>
                     </div>
                     <div class="hero-cta" style="margin-top:var(--spacing-md);">
@@ -65,7 +73,7 @@
                 </div>
                 <div class="hero-media animate-on-scroll zoom-on-hover">
                     <div class="media-card dashboard-preview">
-                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=900&h=600&fit=crop" alt="PropertyScout Dashboard" loading="lazy">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=900&h=600&fit=crop&q=80" alt="PropertyScout Platform" loading="lazy">
                     </div>
                 </div>
                 <div class="decor-blob large" aria-hidden="true"></div>
@@ -76,41 +84,125 @@
     <section class="about-content">
             <div class="container">
                 <div class="about-section animate-on-scroll">
-                    <h2>Our Mission</h2>
-                    <p><span class="alt-font caps teal-text">Simple:</span> give investors the data, tools, and workflows they need to make faster, more confident decisions.</p>
-                    <div class="section-box card-frame" style="margin-top:var(--spacing-md);">
-                        <p><strong>We surface the numbers that matter.</strong> Audit-ready reports, automated cash-flow modeling, and a dashboard that helps you spot opportunities at a glance.</p>
-                        <p class="has-tooltip" data-tooltip="Click contact to request a demo">Want a demo?</p>
+                    <div class="about-section-grid" style="grid-template-columns: 1fr 1fr; align-items: center; gap: var(--spacing-2xl);">
+                        <div class="about-section-content" style="text-align: left; max-width: 65ch; margin: 0;">
+                            <h2>Our <span class="accent-teal">Mission</span></h2>
+                            <div class="text-widget text-widget-accent-teal" style="margin-top: var(--spacing-md);">
+                                <p class="body-alt">Give investors AI-powered tools to manage property leads, track proposals, analyze investments, and monitor portfolios so you can focus on <em>investing</em>, not paperwork.</p>
+                                <p style="margin-top: var(--spacing-sm);">We help you <strong class="accent-teal">manage</strong> your property leads and pipeline, create and track proposals, calculate cap rates instantly, and <span class="accent-orange">monitor your portfolio</span>—all in one centralized platform.</p>
+                            </div>
+                        </div>
+                        <div class="mission-widget" style="display: flex; align-items: center; justify-content: center;">
+                            <div class="widget-card" style="background: linear-gradient(135deg, rgba(17,207,172,0.08), rgba(17,207,172,0.03)); border: 1px solid rgba(17,207,172,0.15); border-radius: var(--border-radius-lg); padding: var(--spacing-xl); position: relative; overflow: hidden; box-shadow: 0 8px 32px rgba(2,6,23,0.4);">
+                                <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--spacing-md);">
+                                    <div class="widget-item" style="background: rgba(17,207,172,0.1); border-radius: var(--border-radius); padding: var(--spacing-md); text-align: center; border: 1px solid rgba(17,207,172,0.2);">
+                                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="color: var(--brand-teal); margin-bottom: var(--spacing-xs);">
+                                            <path d="M9 5H7C5.89543 5 5 5.89543 5 7V19C5 20.1046 5.89543 21 7 21H17C18.1046 21 19 20.1046 19 19V7C19 5.89543 18.1046 5 17 5H15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M9 5C9 3.89543 9.89543 3 11 3H13C14.1046 3 15 3.89543 15 5V5C15 6.10457 14.1046 7 13 7H11C9.89543 7 9 6.10457 9 5V5Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                        <div style="font-size: 0.75rem; color: var(--color-muted); font-weight: 600;">Leads</div>
+                                    </div>
+                                    <div class="widget-item" style="background: rgba(200,95,19,0.1); border-radius: var(--border-radius); padding: var(--spacing-md); text-align: center; border: 1px solid rgba(200,95,19,0.2);">
+                                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="color: var(--brand-orange); margin-bottom: var(--spacing-xs);">
+                                            <path d="M14 2H6C5.46957 2 4.96086 2.21071 4.58579 2.58579C4.21071 2.96086 4 3.46957 4 4V20C4 20.5304 4.21071 21.0391 4.58579 21.4142C4.96086 21.7893 5.46957 22 6 22H18C18.5304 22 19.0391 21.7893 19.4142 21.4142C19.7893 21.0391 20 20.5304 20 20V8L14 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                        <div style="font-size: 0.75rem; color: var(--color-muted); font-weight: 600;">Proposals</div>
+                                    </div>
+                                    <div class="widget-item" style="background: rgba(17,207,172,0.1); border-radius: var(--border-radius); padding: var(--spacing-md); text-align: center; border: 1px solid rgba(17,207,172,0.2);">
+                                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="color: var(--brand-teal); margin-bottom: var(--spacing-xs);">
+                                            <path d="M3 3V21H21" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M7 16L12 11L16 15L21 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                        <div style="font-size: 0.75rem; color: var(--color-muted); font-weight: 600;">Analysis</div>
+                                    </div>
+                                    <div class="widget-item" style="background: rgba(200,95,19,0.1); border-radius: var(--border-radius); padding: var(--spacing-md); text-align: center; border: 1px solid rgba(200,95,19,0.2);">
+                                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="color: var(--brand-orange); margin-bottom: var(--spacing-xs);">
+                                            <path d="M3 21H21" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M5 21V7L13 2L21 7V21" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                        <div style="font-size: 0.75rem; color: var(--color-muted); font-weight: 600;">Portfolio</div>
+                                    </div>
+                                </div>
+                                <div style="position: absolute; top: 0; right: 0; width: 100px; height: 100px; background: radial-gradient(circle, rgba(17,207,172,0.1), transparent 70%); border-radius: 50%; transform: translate(30%, -30%); pointer-events: none;"></div>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
                 <div class="about-section animate-on-scroll">
-                    <h2>Built for Professionals</h2>
-                    <p>We focus on core workflows — acquisition analysis, portfolio monitoring, and reporting — with deep integrations and enterprise-ready controls.</p>
+                    <div class="about-section-grid" style="grid-template-columns: 1fr 1fr; align-items: center; gap: var(--spacing-2xl);">
+                        <div class="mission-widget" style="display: flex; align-items: center; justify-content: center;">
+                            <div class="widget-card" style="background: linear-gradient(135deg, rgba(200,95,19,0.08), rgba(200,95,19,0.03)); border: 1px solid rgba(200,95,19,0.15); border-radius: var(--border-radius-lg); padding: var(--spacing-xl); position: relative; overflow: hidden; box-shadow: 0 8px 32px rgba(2,6,23,0.4);">
+                                <div style="display: flex; flex-direction: column; gap: var(--spacing-md);">
+                                    <div style="display: flex; align-items: center; gap: var(--spacing-md); background: rgba(200,95,19,0.1); border-radius: var(--border-radius); padding: var(--spacing-md); border-left: 3px solid var(--brand-orange);">
+                                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="color: var(--brand-orange); flex-shrink: 0;">
+                                            <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M2 17L12 22L22 17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M2 12L12 17L22 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                        <div>
+                                            <div style="font-weight: 700; color: var(--color-text); margin-bottom: 0.25rem;">AI-Powered</div>
+                                            <div style="font-size: 0.875rem; color: var(--color-muted);">Automated workflows</div>
+                                        </div>
+                                    </div>
+                                    <div style="display: flex; align-items: center; gap: var(--spacing-md); background: rgba(17,207,172,0.1); border-radius: var(--border-radius); padding: var(--spacing-md); border-left: 3px solid var(--brand-teal);">
+                                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="color: var(--brand-teal); flex-shrink: 0;">
+                                            <path d="M21 16V8C20.9996 7.64928 20.9071 7.30481 20.7315 7.00116C20.556 6.69751 20.3037 6.44536 20 6.27L13 2.27C12.696 2.09446 12.3511 2.00205 12 2.00205C11.6489 2.00205 11.304 2.09446 11 2.27L4 6.27C3.69626 6.44536 3.44398 6.69751 3.26846 7.00116C3.09294 7.30481 3.00036 7.64928 3 8V16C3.00036 16.3507 3.09294 16.6952 3.26846 16.9988C3.44398 17.3025 3.69626 17.5546 4 17.73L11 21.73C11.304 21.9055 11.6489 21.9979 12 21.9979C12.3511 21.9979 12.696 21.9055 13 21.73L20 17.73C20.3037 17.5546 20.556 17.3025 20.7315 16.9988C20.9071 16.6952 20.9996 16.3507 21 16Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M3.27002 6.96L12 12L20.73 6.96" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M12 22.08V12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                        <div>
+                                            <div style="font-weight: 700; color: var(--color-text); margin-bottom: 0.25rem;">Centralized</div>
+                                            <div style="font-size: 0.875rem; color: var(--color-muted);">All in one platform</div>
+                                        </div>
+                                    </div>
+                                    <div style="display: flex; align-items: center; gap: var(--spacing-md); background: rgba(200,95,19,0.1); border-radius: var(--border-radius); padding: var(--spacing-md); border-left: 3px solid var(--brand-orange);">
+                                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="color: var(--brand-orange); flex-shrink: 0;">
+                                            <path d="M12 2V22M17 5H9.5C8.57174 5 7.6815 5.36875 7.02513 6.02513C6.36875 6.6815 6 7.57174 6 8.5C6 9.42826 6.36875 10.3185 7.02513 10.9749C7.6815 11.6313 8.57174 12 9.5 12H14.5C15.4283 12 16.3185 12.3687 16.9749 13.0251C17.6313 13.6815 18 14.5717 18 15.5C18 16.4283 17.6313 17.3185 16.9749 17.9749C16.3185 18.6313 15.4283 19 14.5 19H6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                        <div>
+                                            <div style="font-weight: 700; color: var(--color-text); margin-bottom: 0.25rem;">Financial Tools</div>
+                                            <div style="font-size: 0.875rem; color: var(--color-muted);">Cap rate calculator</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div style="position: absolute; bottom: 0; left: 0; width: 100px; height: 100px; background: radial-gradient(circle, rgba(200,95,19,0.1), transparent 70%); border-radius: 50%; transform: translate(-30%, 30%); pointer-events: none;"></div>
+                            </div>
+                        </div>
+                <div class="about-section-content" style="text-align: right; max-width: 65ch; margin: 0 0 0 auto;">
+                    <h2>Built for <span class="accent-orange">Real Estate</span> Investors</h2>
+                    <div class="text-widget text-widget-accent-orange-right" style="margin-top: var(--spacing-md);">
+                        <p>We focus on <strong>what matters</strong> — managing your leads and pipeline, tracking proposals and offers, analyzing investments with cap rate calculations, and monitoring your portfolio — using <em>AI-powered automation</em> to save you time and reduce errors.</p>
+                    </div>
+                </div>
+                    </div>
                 </div>
 
                 <div class="about-section animate-on-scroll">
-                    <h2>Our Values</h2>
+                    <div class="section-header" style="margin-bottom: var(--spacing-xl);">
+                        <h2>Our <span class="teal-text">Values</span></h2>
+                        <p class="alt-font" style="max-width: 600px; margin: 0 auto;">The <strong class="orange-text">principles</strong> that guide everything we build</p>
+                    </div>
                     <div class="values-grid">
                         <div class="value-item">
-                            <h3 class="alt-font teal-text">Precision</h3>
-                            <p>Accurate financials and audit-grade reports.</p>
-                            <div class="value-meta">Audit-ready outputs and clear traceability.</div>
+                            <h3 class="alt-font teal-text">AI-Powered</h3>
+                            <p>Intelligent automation that manages leads and analyzes investments.</p>
+                            <div class="value-meta">AI handles lead organization, email parsing, and financial calculations.</div>
                         </div>
                         <div class="value-item">
-                            <h3 class="alt-font orange-text">Efficiency</h3>
-                            <p>Automations that remove busywork.</p>
-                            <div class="value-meta">Automate repetitive tasks and speed operations.</div>
+                            <h3 class="alt-font orange-text">Pipeline Management</h3>
+                            <p>Never lose track of a lead, proposal, or important deadline.</p>
+                            <div class="value-meta">Manage leads, track proposals, and monitor your entire deal pipeline.</div>
                         </div>
                         <div class="value-item">
-                            <h3 class="alt-font teal-text">Transparency</h3>
-                            <p>Clear pricing and predictable upgrades.</p>
-                            <div class="value-meta">Open data policies and predictable billing.</div>
+                            <h3 class="alt-font teal-text">Financial Analysis</h3>
+                            <p>Calculate cap rates instantly and generate custom reports.</p>
+                            <div class="value-meta">Built-in cap rate calculator and rental analysis report builder.</div>
                         </div>
                         <div class="value-item">
-                            <h3 class="alt-font orange-text">Innovation</h3>
-                            <p>Continuous improvement driven by customer feedback.</p>
-                            <div class="value-meta">Customer-driven roadmap and rapid iteration.</div>
+                            <h3 class="alt-font orange-text">Portfolio Tracking</h3>
+                            <p>Monitor your entire real estate investment portfolio.</p>
+                            <div class="value-meta">Track purchased and sold properties, monitor portfolio value and performance.</div>
                         </div>
                     </div>
                 </div>
@@ -119,8 +211,8 @@
 
         <section class="cta-section">
             <div class="container">
-                <h2>Join the PropertyScout Community</h2>
-                <p>Trusted by professional investors worldwide</p>
+                <h2>Join the <span class="accent-teal">PropertyScout</span> <span class="accent-orange">Community</span></h2>
+                <p>Trusted by <span class="accent-orange">real estate investors</span> who want <span class="accent-teal">AI-powered</span> tools to manage their <span class="accent-orange">leads</span>, <span class="accent-teal">proposals</span>, and <strong class="accent-orange">portfolio</strong></p>
                 <div class="cta-block">
                     <a href="contact.html" class="btn btn-primary btn-large btn-orange cta">Get in Touch</a>
                 </div>
@@ -133,8 +225,8 @@
             <div class="footer-content">
                 <div class="footer-brand">
                     <div class="logo">
-                        <img src="images/logo3.png" alt="PropertyScout Logo">
-                        <span class="logo-text">PropertyScout</span>
+                        <img src="images/logo.png" alt="PropertyScout Logo">
+                        <span class="logo-text"><span class="logo-text-property">Property</span><span class="logo-text-scout">Scout</span></span>
                     </div>
                 </div>
                 <div class="footer-links">
@@ -156,7 +248,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 PropertyScout. All rights reserved.</p>
+                <p>&copy; 2025 Din Ghauri. All rights reserved.</p>
             </div>
         </div>
     </footer>

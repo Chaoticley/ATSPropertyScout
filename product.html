@@ -3,10 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="PropertyScout product overview - Advanced real estate investment software with powerful analytics and portfolio management tools.">
+    <meta name="description" content="PropertyScout product - Organizational tool that organizes real estate deals, analyzes property data, and calculates investment metrics automatically.">
     <title>Product - PropertyScout</title>
     <link rel="stylesheet" href="css/tokens.css">
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/utilities.css">
     <link rel="stylesheet" href="css/theme-enhancements.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,8 +22,8 @@
         <nav class="nav container">
             <div class="nav-brand">
                 <a href="index.html" class="logo">
-                    <img src="images/logo3.png" alt="PropertyScout Logo">
-                    <span class="logo-text">PropertyScout</span>
+                    <img src="images/logo.png" alt="PropertyScout Logo">
+                    <span class="logo-text"><span class="logo-text-property">Property</span><span class="logo-text-scout">Scout</span></span>
                 </a>
             </div>
             <ul class="nav-menu" id="navMenu">
@@ -29,12 +32,6 @@
                 <li><a href="pricing.html">Pricing</a></li>
                 <li><a href="about.html">About</a></li>
                    <li><a href="contact.html" class="btn-nav btn-orange cta">Contact</a></li>
-                </ul>
-                <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
             </ul>
             <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
                 <span></span>
@@ -47,8 +44,13 @@
     <main>
     <section class="page-hero vertical-fade">
             <div class="container">
-                <h1>PropertyScout Platform</h1>
-                <p>Comprehensive real estate investment software designed for professionals who demand precision and efficiency.</p>
+                <div class="hero-badge">
+                    <span class="caps orange-text">PRODUCT</span>
+                </div>
+                <h1><span class="accent-orange">PropertyScout</span> Platform</h1>
+                <div class="text-widget text-widget-accent-orange-top" style="max-width: 700px; margin: 0 auto;">
+                    <p class="body-alt">Complete platform for <strong>managing property leads</strong>, <em>tracking proposals</em>, <strong>analyzing investments</strong>, and monitoring your portfolio—all in one place.</p>
+                </div>
             </div>
     </section>
     <div class="angled-sep" aria-hidden="true"></div>
@@ -56,52 +58,51 @@
             <div class="container">
                 <div class="showcase-item">
                     <div class="showcase-content">
-                        <h2>Intuitive Dashboard</h2>
-                        <p>Get a complete view of your portfolio at a glance. Monitor performance metrics, track cash flow, and identify trends with our powerful dashboard.</p>
+                        <h2><span class="accent-teal">AI-Powered</span> Dashboard</h2>
+                        <p>See all your <span class="accent-orange">property leads</span>, proposals, and portfolio metrics in one place. Track key metrics like total leads, viewings scheduled, average cap rate, and portfolio value.</p>
                         <ul class="feature-list">
-                            <li>Real-time portfolio overview</li>
-                            <li>Customizable widgets and metrics</li>
-                            <li>Performance tracking and alerts</li>
+                            <li>Overview of your lead portfolio at a glance</li>
+                            <li>Key metrics: Total Leads, Viewings Scheduled, Avg Cap Rate, Portfolio Value</li>
+                            <li>Priority leads section for deals under consideration</li>
                         </ul>
-                           <div class="decorative-dot" aria-hidden="true"></div>
                     </div>
                     <div class="showcase-visual zoom-on-hover">
                             <div class="dashboard-preview large media-card">
-                                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop" alt="PropertyScout Dashboard" loading="lazy">
+                                <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop&q=80" alt="PropertyScout Dashboard Overview" loading="lazy">
                             </div>
                         </div>
                 </div>
 
                 <div class="showcase-item reverse">
                     <div class="showcase-content">
-                        <h2>Advanced Analytics</h2>
-                        <p>Make data-driven decisions with comprehensive analytics. Analyze market trends, property performance, and investment opportunities.</p>
+                        <h2><span class="accent-orange">Financial</span> Analysis</h2>
+                        <p>Calculate <span class="accent-teal">cap rates</span> instantly with our built-in calculator. Generate custom <span class="accent-orange">rental analysis reports</span> to analyze potential deals.</p>
                         <ul class="feature-list">
-                            <li>ROI and cash flow calculations</li>
-                            <li>Market trend analysis</li>
-                            <li>Comparative property analysis</li>
+                            <li>Cap Rate Calculator with instant NOI and property value calculations</li>
+                            <li>Report Builder for custom rental analysis reports</li>
+                            <li>Calculate and analyze potential rental property deals</li>
                         </ul>
                     </div>
                     <div class="showcase-visual zoom-on-hover">
                         <div class="analytics-preview media-card">
-                            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop" alt="Analytics Dashboard" loading="lazy">
+                            <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=800&h=600&fit=crop&q=80" alt="Financial Analysis and Reporting Tools" loading="lazy">
                         </div>
                     </div>
                 </div>
 
                 <div class="showcase-item">
                     <div class="showcase-content">
-                        <h2>Portfolio Management</h2>
-                        <p>Organize and manage all your properties from a single platform. Track documents, maintenance, tenants, and financials.</p>
+                        <h2><span class="accent-teal">Lead</span> Management & Proposals</h2>
+                        <p>Manage your <span class="accent-orange">property leads</span> with advanced filtering and create <span class="accent-teal">proposals</span> directly from your leads. Track your entire pipeline.</p>
                         <ul class="feature-list">
-                            <li>Centralized property database</li>
-                            <li>Document management system</li>
-                            <li>Automated workflows</li>
+                            <li>Advanced lead filtering by status, type, zoning, and investment strategy</li>
+                            <li>Create and track proposals from individual lead pages</li>
+                            <li>Monitor your complete deal pipeline from lead to closing</li>
                         </ul>
                     </div>
                     <div class="showcase-visual zoom-on-hover">
                         <div class="portfolio-preview media-card">
-                            <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&h=600&fit=crop" alt="Portfolio Management" loading="lazy">
+                            <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&h=600&fit=crop&q=80" alt="Lead Management and Portfolio Tracking" loading="lazy">
                         </div>
                     </div>
                 </div>
@@ -110,8 +111,8 @@
 
                 <section class="cta-section">
             <div class="container">
-                <h2>Experience PropertyScout Today</h2>
-                <p>See how our platform can transform your real estate investment workflow</p>
+                <h2>Experience <span class="accent-teal">PropertyScout</span> <span class="accent-orange">Today</span></h2>
+                <p>See how <span class="accent-orange">streamlined</span> organization can transform your <span class="accent-teal">deal workflow</span> with <strong class="accent-orange">AI-powered</strong> automation</p>
                 <a href="pricing.html" class="btn btn-primary btn-large btn-orange cta">Start Free Trial</a>
             </div>
         </section>
@@ -122,8 +123,8 @@
             <div class="footer-content">
                 <div class="footer-brand">
                     <div class="logo">
-                        <img src="images/logo3.png" alt="PropertyScout Logo">
-                        <span class="logo-text">PropertyScout</span>
+                        <img src="images/logo.png" alt="PropertyScout Logo">
+                        <span class="logo-text"><span class="logo-text-property">Property</span><span class="logo-text-scout">Scout</span></span>
                     </div>
                 </div>
                 <div class="footer-links">
@@ -145,7 +146,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 PropertyScout. All rights reserved.</p>
+                <p>&copy; 2025 Din Ghauri. All rights reserved.</p>
             </div>
         </div>
     </footer>
